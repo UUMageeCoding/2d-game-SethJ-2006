@@ -2945,15 +2945,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: m_Color.b
-      value: 0.5019608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: m_Color.g
-      value: 0.78431374
+      value: 0.37254903
       objectReference: {fileID: 0}
     - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.8901961
       objectReference: {fileID: 0}
     - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: m_DrawMode
@@ -9976,7 +9976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1356230254}
   - component: {fileID: 1356230253}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Global Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
