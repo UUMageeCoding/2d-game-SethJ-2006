@@ -3099,7 +3099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230290163}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.6667314, w: 0.74529815}
+  m_LocalRotation: {x: 0, y: 0, z: -0.5989364, w: 0.8007966}
   m_LocalPosition: {x: 0.14700018, y: 0.0033981614, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3260,7 +3260,7 @@ Transform:
   m_GameObject: {fileID: 636102949}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.69697034, w: 0.7170999}
-  m_LocalPosition: {x: 0.087754145, y: -0.1771563, z: 0}
+  m_LocalPosition: {x: 0.06706443, y: -0.19612181, z: 0}
   m_LocalScale: {x: 0.49999988, y: 0.49999988, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3290,7 +3290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696273946}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.89902663, w: 0.437894}
+  m_LocalRotation: {x: 0, y: 0, z: -0.93635225, w: 0.351062}
   m_LocalPosition: {x: 0.007458932, y: -0.03437407, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3309,6 +3309,7 @@ GameObject:
   - component: {fileID: 710064355}
   - component: {fileID: 710064354}
   - component: {fileID: 710064353}
+  - component: {fileID: 710064356}
   m_Layer: 0
   m_Name: Homunculus_Skeletal_Practice
   m_TagString: Untagged
@@ -3417,6 +3418,28 @@ Transform:
   - {fileID: 155204860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &710064356
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710064352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f14a2382c9bc0341b0131888d3876b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1026101634
 GameObject:
   m_ObjectHideFlags: 0
@@ -11890,7 +11913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020166013}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.30587512, w: 0.95207167}
+  m_LocalRotation: {x: -0, y: -0, z: 0.31244424, w: 0.94993615}
   m_LocalPosition: {x: 0.1093, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
