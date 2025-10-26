@@ -19,7 +19,6 @@ public class PlatformCharacterHealth : MonoBehaviour
         if(playerHealth <= 0)
         {
             Destroy(gameObject);
-            Debug.Log("You Are Dead.");
         }
     }
 
