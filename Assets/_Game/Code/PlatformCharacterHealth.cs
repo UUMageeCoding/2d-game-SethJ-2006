@@ -33,12 +33,4 @@ public class PlatformCharacterHealth : MonoBehaviour
             Debug.Log("You Are Dead");
         }
     }
-
-    void OnTriggerEnter2D(Collider2D ether)
-    {
-        if (gameObject.CompareTag("Collectable"))
-        {
-            Destroy(gameObject);
-        }
-    }
 }
