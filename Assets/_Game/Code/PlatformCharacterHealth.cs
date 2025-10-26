@@ -6,8 +6,6 @@ public class PlatformCharacterHealth : MonoBehaviour
     public int redHealth;
 
     public bool isDead;
-
-    public GameManagerScript gameManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,16 +25,15 @@ public class PlatformCharacterHealth : MonoBehaviour
         {
             isDead = true;
             gameObject.SetActive(false);
-            gameManager.gameOver();
             Debug.Log("You Are Dead");
         }
     }
 
     void OnTriggerEnter2D(Collider2D ether)
     {
-        if (other.gameObject.CompareTag("Collectable"))
+        if (gameObject.CompareTag("Collectable"))
         {
-            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
