@@ -5331,7 +5331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  playerHealthR: {fileID: 1328063294}
+  playerHealth: {fileID: 1328063294}
 --- !u!70 &344967192
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
