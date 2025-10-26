@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlatformEnemyDamage : MonoBehaviour
 {
     public int damage;
-    public playerHealthRed playerHealthR;
-    public playerHealthBlue playerHealthB;
+    public PlayerHealthRed playerHealthR;
+    public PlayerHealthBlue playerHealthB;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
