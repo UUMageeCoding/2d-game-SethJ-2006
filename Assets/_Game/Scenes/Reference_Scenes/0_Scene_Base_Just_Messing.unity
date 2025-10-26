@@ -15510,7 +15510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  redHealth: 0
+  redHealth: 1
   isDead: 0
 --- !u!1 &1356230252
 GameObject:
