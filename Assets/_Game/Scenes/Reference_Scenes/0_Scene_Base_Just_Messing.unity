@@ -5165,9 +5165,9 @@ GameObject:
   - component: {fileID: 344967185}
   - component: {fileID: 344967191}
   - component: {fileID: 344967190}
-  - component: {fileID: 344967189}
+  - component: {fileID: 344967192}
   m_Layer: 0
-  m_Name: Sprite-Slime_Skeletal_Animation
+  m_Name: Slime_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5291,52 +5291,6 @@ Transform:
   - {fileID: 1935010050}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &344967189
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344967184}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.6607481, y: 0.4955656}
-  m_SpriteTilingProperty:
-    border: {x: 0.140625, y: 0.43359375, z: 0.359375, w: 0.21289062}
-    pivot: {x: 1.0518271, y: 0.1255282}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.4444045, y: 0.28125015}
-  m_EdgeRadius: 0
 --- !u!50 &344967190
 Rigidbody2D:
   serializedVersion: 5
@@ -5378,6 +5332,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerHealthR: {fileID: 1328063294}
+--- !u!70 &344967192
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344967184}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.664382, y: 0.4650429}
+  m_Size: {x: 0.5039983, y: 0.24673226}
+  m_Direction: 1
 --- !u!1 &349661378
 GameObject:
   m_ObjectHideFlags: 0
@@ -5981,13 +5972,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831136074}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.2357222, w: 0.9718205}
-  m_LocalPosition: {x: 0.2128294, y: -0.053921487, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.63136154, w: 0.7754886}
+  m_LocalPosition: {x: 0.17205384, y: -0.055343658, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1935010050}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -78.301}
 --- !u!4 &853597495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5617869759439217630, guid: c9daa605621737340bd51b1b9fc65304, type: 3}
@@ -15684,13 +15675,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529847843}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.13262714, w: 0.991166}
-  m_LocalPosition: {x: 0.21716836, y: 0.052652378, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.46271563, w: 0.88650686}
+  m_LocalPosition: {x: 0.17634173, y: 0.0497777, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1935010050}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 55.125}
 --- !u!1 &1548535387
 GameObject:
   m_ObjectHideFlags: 0

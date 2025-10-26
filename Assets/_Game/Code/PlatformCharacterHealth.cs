@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlatformCharacterHealth : MonoBehaviour
 {
-    public int maxHealth = 1;
+    public int maxHealth = 3;
     public int redHealth;
 
     public bool isDead;
@@ -15,7 +15,12 @@ public class PlatformCharacterHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        redHealth = damage;
+        redHealth -= damage;
+        if(redHealth <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("You Are Dead.");
+        }
     }
 
     // Update is called once per frame

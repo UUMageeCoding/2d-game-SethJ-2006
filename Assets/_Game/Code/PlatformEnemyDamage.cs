@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class PlatformEnemyDamage : MonoBehaviour
 {
-    public int damage = 1;
-    public PlatformCharacterHealth playerHealthR;
+    public int damage;
+    public PlatformCharacterHealth playerHealth;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player Red")
+        if (collision.gameObject.tag == "Player")
         {
-            playerHealthR.TakeDamage(damage);
+            playerHealth.TakeDamage(damage);
         }
     }
 }
