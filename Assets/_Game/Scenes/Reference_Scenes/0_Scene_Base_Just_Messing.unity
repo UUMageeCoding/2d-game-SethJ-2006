@@ -5331,7 +5331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  playerHealth: {fileID: 1328063294}
+  redHealth: {fileID: 1328063294}
 --- !u!70 &344967192
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -15883,7 +15883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dc4e720999c8949879937d84a895e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 3
   redHealth: 1
   isDead: 0
 --- !u!1 &1356230252
@@ -20947,7 +20947,7 @@ Transform:
   m_GameObject: {fileID: 1935010049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7198732, w: 0.6941056}
-  m_LocalPosition: {x: 16.0063, y: 0.50305104, z: 0}
+  m_LocalPosition: {x: 16.0063, y: 0.503051, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
