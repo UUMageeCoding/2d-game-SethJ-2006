@@ -2161,6 +2161,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5518218623540502192, guid: 88d762b01ff05144b942aa05619bb9c9, type: 3}
+    - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
+      propertyPath: m_Color.b
+      value: 0.99238336
+      objectReference: {fileID: 0}
+    - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3295294710480414227, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: m_Name
       value: Player
