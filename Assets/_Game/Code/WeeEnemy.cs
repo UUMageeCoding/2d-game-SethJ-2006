@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -5,6 +6,7 @@ public class WeeEnemy : MonoBehaviour
 {
     public Transform playerPosition;
     Vector2 directionToPlayer;
+    int EnemySpeed = 3;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,9 +19,16 @@ public class WeeEnemy : MonoBehaviour
     {
         // get direction to player
         if (playerPosition != null)
-        {        
-        directionToPlayer = (playerPosition.position - transform.position).normalized;
-        Debug.Log(directionToPlayer);
+        {
+            directionToPlayer = (playerPosition.position - transform.position).normalized;
+            Debug.Log(directionToPlayer);
         }
+
+        if (playerPosition.position - transform.position != Vector3.zero)MoveToPlayer(EnemySpeed);
+    }
+    
+    public void MoveToPlayer(float speed)
+    {
+        transform.position = Vector2.MoveTowards(transform.position, playerPosition.position, speed * Time.deltaTime);
     }
 }
