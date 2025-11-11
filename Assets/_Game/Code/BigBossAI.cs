@@ -28,5 +28,23 @@ public class BigBossAI : MonoBehaviour
     void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, playerPosition.position);
+        switch (currentState)
+        {
+            case BigBossState.Idle:
+                if (distanceToPlayer < attackDistance)
+                {
+                    currentState = BigBossState.Attacking;
+                    spriteRenderer.color = Color.red;
+                }
+                break;
+
+            case BigBossState.Attacking:
+                if (distanceToPlayer > attackDistance + hysteresis)
+                {
+                    currentState = BigBossState.Idle;
+                    spriteRenderer.color = Color.brown;
+                }
+                break;
+        }
     }
 }
