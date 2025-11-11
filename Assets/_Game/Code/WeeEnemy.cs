@@ -17,9 +17,8 @@ public class WeeEnemy : MonoBehaviour
     {
         // get direction to player
         if (playerPosition != null)
-        {
-                
-                directionToPlayer = (playerPosition.position - transform.position).normalized;
+        {        
+        directionToPlayer = (playerPosition.position - transform.position).normalized;
         Debug.Log(directionToPlayer);
         }
     }
