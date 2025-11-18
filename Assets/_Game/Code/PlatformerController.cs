@@ -40,19 +40,21 @@ public class PlatformerController : MonoBehaviour
 
     void Update()
     {
-        //FlipPlayer();
         // Get horizontal input
         moveInput = Input.GetAxisRaw("Horizontal");
-        
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-        Debug.Log("moveInput " + moveInput);
-        // Check if grounded
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        if (moveInput < 0 && isGrounded)
+        if (moveInput > 0)
         {
             sr.flipX = false;
         }
+        else if(moveInput < 0)
+        {
+            sr.flipX = true;
+        }
+        
+        // Check if grounded
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+       
 
 
 
@@ -64,7 +66,10 @@ public class PlatformerController : MonoBehaviour
         }
     }
 
-
+    void FixedUpdate()
+    {
+         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+    }
 
 void FlipPlayer()
 
@@ -82,25 +87,6 @@ void FlipPlayer()
 
 
     }
-    void FixedUpdate()
-    {
-        // Apply horizontal movement
-       /* rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-        if (rb.linearVelocityY != 0)
-        {
-            anim.SetBool("isWalking", true);
-            if (rb.linearVelocityY > 0)
-            {
-                sr.flipX = false;
-                isFlippedX = false;
-            }
-            else
-            {
-                sr.flipX = true;
-                isFlippedX = true;
-            }
-        }*/
-
         // Visualise ground check in editor
         void OnDrawGizmosSelected()
         {
@@ -111,4 +97,3 @@ void FlipPlayer()
             }
         }
     }
-}
