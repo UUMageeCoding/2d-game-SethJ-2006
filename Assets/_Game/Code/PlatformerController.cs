@@ -40,12 +40,22 @@ public class PlatformerController : MonoBehaviour
 
     void Update()
     {
-        FlipPlayer();
+        //FlipPlayer();
         // Get horizontal input
         moveInput = Input.GetAxisRaw("Horizontal");
-
+        
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        Debug.Log("moveInput " + moveInput);
         // Check if grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (moveInput < 0 && isGrounded)
+        {
+            sr.flipX = false;
+        }
+
+
+
 
         // Jump input
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -60,12 +70,13 @@ void FlipPlayer()
 
     {
         
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-        bool playerHasHorizontalSpeed = Math.Abs(rb.linearvelocity.x) > Mathf.Epsilon;
+        
+        bool playerHasHorizontalSpeed = Math.Abs(rb.linearVelocity.x) > Mathf.Epsilon;
         if(playerHasHorizontalSpeed)
         {
 
-            transform.localScale = new Vector2(Math.Abs(rb.linearvelocity.x),0f) > Mathf.Epsilon;
+            //transform.localScale = new Vector2(Math.Abs(rb.linearVelocity.x), 0f) > Mathf.Epsilon;
+            
 
         }
 
