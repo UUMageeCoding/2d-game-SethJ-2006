@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Pit
+  - Solid
   layers:
   - Default
   - TransparentFX
