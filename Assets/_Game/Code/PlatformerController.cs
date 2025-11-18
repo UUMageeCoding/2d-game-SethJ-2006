@@ -71,22 +71,6 @@ public class PlatformerController : MonoBehaviour
          rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
     }
 
-void FlipPlayer()
-
-    {
-        
-        
-        bool playerHasHorizontalSpeed = Math.Abs(rb.linearVelocity.x) > Mathf.Epsilon;
-        if(playerHasHorizontalSpeed)
-        {
-
-            //transform.localScale = new Vector2(Math.Abs(rb.linearVelocity.x), 0f) > Mathf.Epsilon;
-            
-
-        }
-
-
-    }
         // Visualise ground check in editor
         void OnDrawGizmosSelected()
         {
