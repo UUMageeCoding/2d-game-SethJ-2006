@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlatformCharacterHealth : MonoBehaviour
 {
-    public int maxHealth = 1;
+    public int maxHealth = 10;
     public int playerHealth;
 
     public bool isDead;
