@@ -30,7 +30,7 @@ public class PlatformEnemyPatrol : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // When an enemy hits a 'solid wall', reverse direction
-        if (collision.gameObject.CompareTag("solid"))
+        if (collision.gameObject.CompareTag("Solid"))
         {
             isFacingRight = !isFacingRight;
         }
