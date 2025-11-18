@@ -1,3 +1,6 @@
+using System;
+using Unity.Mathematics;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Timeline;
 
@@ -15,11 +18,13 @@ public class PlatformerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] bool isFlippedX = false;
 
-    private Rigidbody2D rb;
+    Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sr;
     private bool isGrounded;
     private float moveInput;
+    
+    
 
     void Start()
     {
@@ -35,6 +40,7 @@ public class PlatformerController : MonoBehaviour
 
     void Update()
     {
+        FlipPlayer();
         // Get horizontal input
         moveInput = Input.GetAxisRaw("Horizontal");
 
@@ -48,10 +54,27 @@ public class PlatformerController : MonoBehaviour
         }
     }
 
+
+
+void FlipPlayer()
+
+    {
+        
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        bool playerHasHorizontalSpeed = Math.Abs(rb.linearvelocity.x) > Mathf.Epsilon;
+        if(playerHasHorizontalSpeed)
+        {
+
+            transform.localScale = new Vector2(Math.Abs(rb.linearvelocity.x),0f) > Mathf.Epsilon;
+
+        }
+
+
+    }
     void FixedUpdate()
     {
         // Apply horizontal movement
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+       /* rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
         if (rb.linearVelocityY != 0)
         {
             anim.SetBool("isWalking", true);
@@ -65,7 +88,7 @@ public class PlatformerController : MonoBehaviour
                 sr.flipX = true;
                 isFlippedX = true;
             }
-        }
+        }*/
 
         // Visualise ground check in editor
         void OnDrawGizmosSelected()
