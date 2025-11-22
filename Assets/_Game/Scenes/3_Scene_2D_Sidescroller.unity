@@ -23243,6 +23243,7 @@ MonoBehaviour:
   maxHealth: 10
   playerHealth: 5
   isDead: 0
+  Respawn: 0
 --- !u!114 &1373976579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24508,6 +24509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100923691}
   - component: {fileID: 2100923692}
+  - component: {fileID: 2100923693}
   m_Layer: 0
   m_Name: AttackHitbox
   m_TagString: Untagged
@@ -24576,6 +24578,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.31010512}
   m_EdgeRadius: 0
+--- !u!114 &2100923693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100923690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da4a121747074d4dbd250a88a10052e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  currentHealth: {fileID: 0}
 --- !u!1001 &137436545011958567
 PrefabInstance:
   m_ObjectHideFlags: 0
