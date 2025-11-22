@@ -10,7 +10,7 @@ public class PlatformPlayerAttack : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         hitbox =
-    transform.Find("HitboxGameObjectName").GetComponent<BoxCollider2D>();
+    transform.Find("AttackHitbox").GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class PlatformPlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift)) // Attacks when the Left Shift key is pressed.
         {
-            animator.SetTrigger("Player_Attack_Animation");
+            animator.SetTrigger("MeleeAttack");
             Invoke("ActivateHitbox", 12f);
             Invoke("DeactiveHitbox", 20f);
         }
