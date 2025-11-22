@@ -27,7 +27,7 @@ public class PlatformerController : MonoBehaviour
     public float knockbackForce;
     public float knockbackCounter;
     public float knockbackTotalTime;
-    public bool knockbackFromRight
+    public bool knockbackFromRight;
     
     
 
