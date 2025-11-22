@@ -10160,10 +10160,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1798842831138387825, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: knockbackForce
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1798842831138387825, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: knockbackCounter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798842831138387825, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
+      propertyPath: knockbackTotalTime
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
