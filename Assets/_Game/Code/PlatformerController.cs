@@ -23,6 +23,11 @@ public class PlatformerController : MonoBehaviour
     private SpriteRenderer sr;
     private bool isGrounded;
     private float moveInput;
+
+    public float knockbackForce;
+    public float knockbackCounter;
+    public float knockbackTotalTime;
+    public bool knockbackFromRight
     
     
 
@@ -68,7 +73,24 @@ public class PlatformerController : MonoBehaviour
 
     void FixedUpdate()
     {
-         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        if (knockbackCounter <= 0)
+        {
+            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        }
+        else
+        {
+            if (knockbackFromRight == true)
+            {
+                rb.linearVelocity = new Vector2(-knockbackForce, knockbackForce);
+            }
+            if (knockbackFromRight == false)
+            {
+                rb.linearVelocity = new Vector2(knockbackForce, knockbackForce);
+            }
+
+            knockbackCounter -= Time.deltaTime;
+        }
+            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
     }
 
         // Visualise ground check in editor
