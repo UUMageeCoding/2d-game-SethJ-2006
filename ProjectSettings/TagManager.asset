@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pit
   - Solid
+  - Enemy
   layers:
   - Default
   - TransparentFX

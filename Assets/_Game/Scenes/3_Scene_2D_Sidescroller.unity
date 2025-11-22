@@ -741,6 +741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarrierEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2864635004762089693, guid: cd64223e7f1c7df449f3acb88f788a0a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4502346803664150787, guid: cd64223e7f1c7df449f3acb88f788a0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 59.85
@@ -24591,6 +24595,10 @@ PrefabInstance:
     - target: {fileID: 2864635004762089693, guid: cd64223e7f1c7df449f3acb88f788a0a, type: 3}
       propertyPath: m_Name
       value: BarrierEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864635004762089693, guid: cd64223e7f1c7df449f3acb88f788a0a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4502346803664150787, guid: cd64223e7f1c7df449f3acb88f788a0a, type: 3}
       propertyPath: m_LocalPosition.x
