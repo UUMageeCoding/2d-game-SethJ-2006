@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlatformCharacterHealth : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class PlatformCharacterHealth : MonoBehaviour
     public int playerHealth;
 
     public bool isDead;
+    public int Respawn;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,6 +32,7 @@ public class PlatformCharacterHealth : MonoBehaviour
             isDead = true;
             gameObject.SetActive(false);
             Debug.Log("You Are Dead");
+            SceneManager.LoadScene(Respawn);
         }
     }
 }
