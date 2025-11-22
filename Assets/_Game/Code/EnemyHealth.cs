@@ -7,4 +7,12 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float maxHealth = 5;
     public float currentHealth;
 
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if(currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
