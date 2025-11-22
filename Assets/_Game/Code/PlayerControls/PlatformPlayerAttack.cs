@@ -18,7 +18,7 @@ public class PlatformPlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift)) // Attacks when the Left Shift key is pressed.
         {
-            animator.SetTrigger("MeleeAttack");
+            animator.SetTrigger("PlayerAttackAnimation");
             Invoke("ActivateHitbox", 12f);
             Invoke("DeactiveHitbox", 20f);
         }
