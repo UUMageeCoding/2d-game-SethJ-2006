@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 35167483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -91.45, y: -1.05, z: 0}
+  m_LocalPosition: {x: -90.14, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -574,11 +574,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 266641508}
-  - component: {fileID: 266641509}
   m_Layer: 0
-  m_Name: PatrolLimit (1)
+  m_Name: PatrolLimit1
   m_TagString: Solid
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -591,48 +590,12 @@ Transform:
   m_GameObject: {fileID: 266641507}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.99, y: -1.05, z: 0}
+  m_LocalPosition: {x: 85, y: -0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &266641509
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266641507}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
 --- !u!1 &281743726
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,11 +767,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 428449679}
-  - component: {fileID: 428449680}
   m_Layer: 0
-  m_Name: PatrolLimit
+  m_Name: PatrolLimit0
   m_TagString: Solid
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -821,48 +783,12 @@ Transform:
   m_GameObject: {fileID: 428449678}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.49, y: -1.05, z: 0}
+  m_LocalPosition: {x: 80.49, y: -0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &428449680
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428449678}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
 --- !u!1 &445025489
 GameObject:
   m_ObjectHideFlags: 0
@@ -27422,9 +27348,9 @@ GameObject:
   - component: {fileID: 1086977945}
   - component: {fileID: 1086977947}
   - component: {fileID: 1086977946}
-  - component: {fileID: 1086977948}
   - component: {fileID: 1086977949}
   - component: {fileID: 1086977950}
+  - component: {fileID: 1086977951}
   m_Layer: 0
   m_Name: RollerPatrol
   m_TagString: Enemy
@@ -27494,7 +27420,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1638708805950135036, guid: 37b16baef51bc4b4eabc1bbc64dd5415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.5, y: 1}
@@ -27525,19 +27451,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1086977948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086977944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf9f5a8a89622c14786634715b8673cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemySpeed: 2
 --- !u!50 &1086977949
 Rigidbody2D:
   serializedVersion: 5
@@ -27602,6 +27515,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.5, y: 1}
   m_Direction: 1
+--- !u!114 &1086977951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086977944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b51fe4f107e984fa2ba261e47a4e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolPoint:
+  - {fileID: 428449679}
+  - {fileID: 266641508}
+  moveSpeed: 2
+  destination: 0
 --- !u!1 &1213989569
 GameObject:
   m_ObjectHideFlags: 0
