@@ -47,6 +47,14 @@ public class PlatformerController : MonoBehaviour
     {
         // Get horizontal input
         moveInput = Input.GetAxisRaw("Horizontal");
+        if(moveInput > 0 || moveInput < 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
         if (moveInput > 0)
         {
             sr.flipX = false;
