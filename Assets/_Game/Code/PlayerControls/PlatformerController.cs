@@ -49,11 +49,11 @@ public class PlatformerController : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
         if(moveInput > 0 || moveInput < 0)
         {
-            animator.SetBool("isRunning", true);
+            animator.SetBool("IsRunning", true);
         }
         else
         {
-            animator.SetBool("isRunning", false);
+            animator.SetBool("IsRunning", false);
         }
         if (moveInput > 0)
         {
@@ -75,7 +75,7 @@ public class PlatformerController : MonoBehaviour
         // Jump input
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            animator.GetBool("isGrounded");
+            animator.GetBool("IsGrounded");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }

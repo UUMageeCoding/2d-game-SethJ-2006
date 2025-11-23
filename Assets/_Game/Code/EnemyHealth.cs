@@ -4,12 +4,12 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private float maxHealth = 5;
+    [SerializeField] private float maxHealth;
     public float currentHealth;
 
     private void Start()
     {
-        maxHealth = currentHealth;
+        currentHealth = maxHealth;
     }
 
     public void TakeDamage(int damage)
