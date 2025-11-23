@@ -19,7 +19,7 @@ public class PlatformerController : MonoBehaviour
     [SerializeField] bool isFlippedX = false;
 
     Rigidbody2D rb;
-    private Animator anim;
+    private Animator animator;
     private SpriteRenderer sr;
     private bool isGrounded;
     private float moveInput;
@@ -34,7 +34,7 @@ public class PlatformerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
 
         // Set to Dynamic with gravity
@@ -67,6 +67,7 @@ public class PlatformerController : MonoBehaviour
         // Jump input
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            animator.GetBool("isGrounded");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
