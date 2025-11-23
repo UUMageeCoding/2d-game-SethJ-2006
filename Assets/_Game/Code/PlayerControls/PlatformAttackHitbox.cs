@@ -5,12 +5,12 @@ public class PlatformAttackHitbox : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    public int damage = 1;
-   public EnemyHealth currentHealth;
+   public EnemyHealth maxHealth;
    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            currentHealth.TakeDamage(damage);
+            maxHealth.TakeDamage(damage);
         }
     }
 }
