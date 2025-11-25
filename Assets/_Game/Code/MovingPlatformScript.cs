@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovingPlatformScript : MonoBehaviour
@@ -26,5 +28,14 @@ public class MovingPlatformScript : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.transform.SetParent(transform);
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.transform.SetParent(null);
     }
 }
