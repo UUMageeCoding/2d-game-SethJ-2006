@@ -16,7 +16,11 @@ public class EnemyPatrolScript : MonoBehaviour
             if(Vector2.Distance(transform.position, patrolPoints[0].position) < 0.2f)
             {
                 // transform.localScale = new Vector3(1, 1, 1);
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1;
+                transform.localScale = localScale;
                 patrolDestination = 1;
+                Debug.Log("Boing");
             }
             if(patrolDestination == 1)
         {
@@ -24,7 +28,11 @@ public class EnemyPatrolScript : MonoBehaviour
             if(Vector2.Distance(transform.position, patrolPoints[1].position) < 0.2f)
             {
                 // transform.localScale = new Vector3(-1, 1, 1);
-                patrolDestination = 0;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1;
+                transform.localScale = localScale;
+                    patrolDestination = 0;
+                    Debug.Log("Bounce");
             }
         }
         }
