@@ -65547,8 +65547,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da4a121747074d4dbd250a88a10052e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPos: {fileID: 2100923691}
+  attackRadius: 1
   damage: 1
-  maxHealth: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!212 &2100923694
 SpriteRenderer:
   m_ObjectHideFlags: 0

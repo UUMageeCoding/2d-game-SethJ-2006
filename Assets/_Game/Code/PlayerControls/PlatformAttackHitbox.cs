@@ -4,13 +4,22 @@ public class PlatformAttackHitbox : MonoBehaviour
 
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+   [SerializeField] Transform attackPos;
+   public float attackRadius = 1f;
    public int damage = 1;
-   public EnemyHealth maxHealth;
-   private void OnTriggerEnter2D(Collider2D collision)
+   public LayerMask enemyLayer;
+   // public EnemyHealth maxHealth;
+// private void OnTriggerEnter2D(Collider2D collision){if (collision.gameObject.CompareTag("Enemy")){maxHealth.TakeDamage(damage);}}
+public void Attack()
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPos.position, attackRadius, enemyLayer);
+        foreach(Collider enemyCollider in hitEnemies)
         {
-            maxHealth.TakeDamage(damage);
+            IDamageable obj = enemyCollider.GetComponent<IDamageable>();
+            if(obj!= null)
+            {
+                obj.TakeDamage(damage);
+            }
         }
     }
 }
