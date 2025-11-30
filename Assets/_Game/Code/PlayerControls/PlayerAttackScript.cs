@@ -10,6 +10,7 @@ public class PlayerAttackScript : MonoBehaviour
     public LayerMask whatIsEnemy;
     public float attackRange;
     public int damage;
+    private Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame
@@ -19,6 +20,9 @@ public class PlayerAttackScript : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                animator.SetTrigger("PlayerAttackAnimation");
+                Invoke("ActivateHitbox", 12f);
+                Invoke("DeactiveHitbox", 20f);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
