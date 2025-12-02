@@ -13,6 +13,10 @@ public class PlatformPlayerDetection: MonoBehaviour
     SpriteRenderer spriteRenderer;
     public int attackRange;
 
+    public GameObject projectile;
+    public Transform projectilePos;
+    private float cooldownTimer = 5;
+
     public EnemyDetectionModes currentState = EnemyDetectionModes.Idle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,6 +39,19 @@ public class PlatformPlayerDetection: MonoBehaviour
                 break;
 
             case EnemyDetectionModes.Attacking:
+    {
+        cooldownTimer += Time.deltaTime;
+        if (cooldownTimer > 4)
+        {
+            cooldownTimer = 0;
+            shoot();
+        }
+    }
+    
+    void shoot()
+    {
+        Instantiate(projectile, projectilePos.position, Quaternion.identity);
+    }
                 if (distanceToPlayer > attackRange + hysteresis)
                 {
                     currentState = EnemyDetectionModes.Idle;
