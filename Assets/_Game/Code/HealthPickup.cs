@@ -3,7 +3,7 @@ using UnityEngine;
 public class HealthPickup : MonoBehaviour
 
 {
-    public int healthBack = 10;
+    public int healthBack;
     public PlatformCharacterHealth playerHealth;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

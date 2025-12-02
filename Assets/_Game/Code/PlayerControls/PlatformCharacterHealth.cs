@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -40,7 +41,9 @@ public class PlatformCharacterHealth : MonoBehaviour
     {
         if (playerHealth < 10)
         {
-            playerHealth += healthBack;
+            int maxHeal = Mathf.Max(maxHealth - playerHealth, 0);
+            int actualHeal = Mathf.Min(maxHealth, healthBack);
+            playerHealth += actualHeal;
             Debug.Log("Health restored!");
         }
     }
