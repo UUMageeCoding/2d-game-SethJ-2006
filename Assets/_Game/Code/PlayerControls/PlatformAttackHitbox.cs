@@ -14,7 +14,7 @@ public class PlatformAttackHitbox : MonoBehaviour
 
     [SerializeField] public List<GameObject> enemies;
     
-    private void Update()
+    private void Start()
     {
         Attack();
     }
