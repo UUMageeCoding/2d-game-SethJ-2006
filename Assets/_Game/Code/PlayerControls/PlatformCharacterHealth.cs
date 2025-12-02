@@ -42,7 +42,7 @@ public class PlatformCharacterHealth : MonoBehaviour
         if (playerHealth < 10)
         {
             int maxHeal = Mathf.Max(maxHealth - playerHealth, 0);
-            int actualHeal = Mathf.Min(maxHealth, healthBack);
+            int actualHeal = Mathf.Min(maxHeal, healthBack);
             playerHealth += actualHeal;
             Debug.Log("Health restored!");
         }
