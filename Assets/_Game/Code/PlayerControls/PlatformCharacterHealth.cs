@@ -35,4 +35,13 @@ public class PlatformCharacterHealth : MonoBehaviour
             SceneManager.LoadScene(Respawn);
         }
     }
+
+    public void Heal(int healthBack)
+    {
+        if (playerHealth < 10)
+        {
+            playerHealth += healthBack;
+            Debug.Log("Health restored!");
+        }
+    }
 }
