@@ -26,7 +26,15 @@ public class PlatformAttackHitbox : MonoBehaviour
         {
             if ((this.transform.position - enemy.transform.position).magnitude < attackRadius)
             {
-                enemy.GetComponent<EnemyHealth>().TakeDamage(damage);
+                EnemyHealth eh = enemy.GetComponent<EnemyHealth>();
+                if (eh.currentHealth <= damage)
+                {
+                    if (enemies.Contains(enemy))
+                    {
+                        enemies.Remove(enemy);
+                    }
+                }
+                eh.TakeDamage(damage);
             }
         }
         
