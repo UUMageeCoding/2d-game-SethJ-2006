@@ -13,7 +13,7 @@ public class PlatformAttackHitbox : MonoBehaviour
     // private void OnTriggerEnter2D(Collider2D collision){if (collision.gameObject.CompareTag("Enemy")){maxHealth.TakeDamage(damage);}}
 
     [SerializeField] public List<GameObject> enemies;
-
+    
     private void Update()
     {
         Attack();
@@ -21,14 +21,17 @@ public class PlatformAttackHitbox : MonoBehaviour
     
     public void Attack()
     {
-        
+
         foreach (GameObject enemy in enemies)
         {
-            if ( (this.transform.position - enemy.transform.position).magnitude < attackRadius )
+            if ((this.transform.position - enemy.transform.position).magnitude < attackRadius)
             {
                 enemy.GetComponent<EnemyHealth>().TakeDamage(damage);
             }
         }
+        
+  
+
         /*
         Collider[] hitEnemies = Physics.OverlapSphere(attackPos.position, attackRadius, enemyLayer);
         foreach (Collider enemyCollider in hitEnemies)
