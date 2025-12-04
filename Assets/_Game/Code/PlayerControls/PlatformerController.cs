@@ -28,8 +28,6 @@ public class PlatformerController : MonoBehaviour
     public float knockbackCounter;
     public float knockbackTotalTime;
     public bool knockbackFromRight;
-    
-    
 
     void Start()
     {
@@ -99,8 +97,10 @@ public class PlatformerController : MonoBehaviour
 
             knockbackCounter -= Time.deltaTime;
         }
-            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
     }
+    
+
 
         // Visualise ground check in editor
         void OnDrawGizmosSelected()
