@@ -23307,6 +23307,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1798842831138387825, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
+      propertyPath: isFlippedX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798842831138387825, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: knockbackForce
       value: 6
       objectReference: {fileID: 0}
@@ -23320,6 +23324,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2528289210049440747, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
