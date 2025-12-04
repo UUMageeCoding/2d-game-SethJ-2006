@@ -5,7 +5,7 @@ public class PlatformPlayerAttack : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
     private BoxCollider2D hitbox;
-    PlatformAttackHitbox dmgHitbox;
+    public PlatformAttackHitbox dmgHitbox;
     private void Start()
     {
         animator = GetComponent<Animator>();

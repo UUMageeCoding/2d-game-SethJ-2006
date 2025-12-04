@@ -68712,6 +68712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9201e48a7e55d6b468eb5f8e470cf8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmgHitbox: {fileID: 2100923693}
 --- !u!114 &1373976598
 MonoBehaviour:
   m_ObjectHideFlags: 0
