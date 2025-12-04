@@ -15,7 +15,7 @@ public class PlatformPlayerDetection: MonoBehaviour
 
     public GameObject projectile;
     public Transform projectilePos;
-    private float cooldownTimer = 5;
+    private float cooldownTimer = 15;
 
     public EnemyDetectionModes currentState = EnemyDetectionModes.Idle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
