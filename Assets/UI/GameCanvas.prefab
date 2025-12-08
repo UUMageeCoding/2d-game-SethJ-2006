@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8775142771582628350}
   - component: {fileID: 7519058954535162989}
+  - component: {fileID: 7957395212272424472}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -175,7 +176,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.72955966, g: 0.17665431, b: 0.17665431, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.57254905, g: 1, b: 0.30980393, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 1
   m_SpriteState:
@@ -201,6 +202,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7957395212272424472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827081486857021185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3683d5bdf718fc4eb938945e649c1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5423975757460330145
 GameObject:
   m_ObjectHideFlags: 0
