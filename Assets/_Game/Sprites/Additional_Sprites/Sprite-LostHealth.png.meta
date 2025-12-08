@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b0c737b36a84b634b9d5fc55f9227b5f
+guid: 296a8cf5fb25754468027f2e26f417ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3852853088950721442
-    second: Sprite-HealthBar_0
+      213: -4772304449800190257
+    second: Sprite-LostHealth_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-HealthBar_0
+      name: Sprite-LostHealth_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ab9caa9875187530800000000000000
-      internalID: 3852853088950721442
+      spriteID: fc6c4ad336e55cdb0800000000000000
+      internalID: -4772304449800190257
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3f7f491878f93bb478b3f6df4e4ec8ac
+    spriteID: ca020aa5ac5a3ee48a470353a92cba18
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +137,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sprite-HealthBar_0: 3852853088950721442
+      Sprite-LostHealth_0: -4772304449800190257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
