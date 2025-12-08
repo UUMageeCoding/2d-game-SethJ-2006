@@ -12,9 +12,9 @@ public class PlayerHealthbar : MonoBehaviour
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player
-        healthSlider.value = CalculateSliderPercentage();
-        healthBarText.text = "HP " + _ + " / " + 
+        // player
+        // healthSlider.value = CalculateSliderPercentage();
+        // healthBarText.text = "HP " + _ + " / " + 
     }
 
     // Update is called once per frame

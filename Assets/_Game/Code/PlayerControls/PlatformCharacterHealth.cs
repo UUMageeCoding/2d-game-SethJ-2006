@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlatformCharacterHealth : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlatformCharacterHealth : MonoBehaviour
 
     public bool isDead;
     public int Respawn;
+
+    public TMP_Text healthBarText;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,6 +38,8 @@ public class PlatformCharacterHealth : MonoBehaviour
             Debug.Log("You Are Dead");
             SceneManager.LoadScene(Respawn);
         }
+
+        healthBarText.text = "Health: " + playerHealth + " / 10";
     }
 
     public void Heal(int healthBack)
