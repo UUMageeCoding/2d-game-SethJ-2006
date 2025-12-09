@@ -93102,12 +93102,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPos: {fileID: 2100923691}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 2100923694}
+  flipX: 0
   attackRadius: 2.5
   damage: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
+  sr: {fileID: 1373976590}
   enemies:
   - {fileID: 620868655}
   - {fileID: 917902215}

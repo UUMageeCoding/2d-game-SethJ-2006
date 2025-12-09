@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlatformAttackHitbox : MonoBehaviour
@@ -7,9 +8,12 @@ public class PlatformAttackHitbox : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    [SerializeField] Transform attackPos;
    [SerializeField] private SpriteRenderer spriteRenderer;
+   [SerializeField] bool flipX = false;
    public float attackRadius = 1f;
    public int damage = 1;
     public LayerMask enemyLayer;
+
+    public PlatformerController sr;
     // public EnemyHealth maxHealth;
     // private void OnTriggerEnter2D(Collider2D collision){if (collision.gameObject.CompareTag("Enemy")){maxHealth.TakeDamage(damage);}}
 
@@ -19,7 +23,19 @@ public class PlatformAttackHitbox : MonoBehaviour
     {
         Attack();
     }
-    
+
+    void FixedUpdate()
+    {
+        if(sr.flipX == true)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if(sr.flipX == false)
+        {
+            spriteRenderer.flipX = false;
+        }
+    }
+
     public void Attack()
     {
 
