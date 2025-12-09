@@ -5,6 +5,9 @@ public class EnemyProjectile : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
+    public float lifeSpanTimer;
+    public PlatformCharacterHealth playerHealth;
+    public int damage;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +25,20 @@ public class EnemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        lifeSpanTimer += Time.deltaTime;
+        if (lifeSpanTimer > 10)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            playerHealth.TakeDamage(damage);
+
+            Destroy(gameObject);
+        }
     }
 }
