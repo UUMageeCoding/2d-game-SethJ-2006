@@ -16,7 +16,7 @@ public class PlatformerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] bool isFlippedX = false;
+    [SerializeField] public bool flipX = false;
 
     Rigidbody2D rb;
     private Animator animator;
