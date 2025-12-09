@@ -6,7 +6,8 @@ public class EnemyProjectile : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     public float lifeSpanTimer;
-    public PlatformCharacterHealth playerHealth;
+
+    private PlatformCharacterHealth playerHealth;
     public int damage;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -14,6 +15,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        // playerHealth = player.GetComponent<PlatformCharacterHealth>();
 
         Vector3 direction = player.transform.position - transform.position;
         rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
@@ -34,9 +36,14 @@ public class EnemyProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Target hit");
+        
         if(other.gameObject.CompareTag("Player"))
         {
+            playerHealth = other.GetComponent<PlatformCharacterHealth>();
+
             playerHealth.TakeDamage(damage);
+            
 
             Destroy(gameObject);
         }
