@@ -3,7 +3,7 @@ using UnityEngine;
 public class SaveWoundedText : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Vector3 moveSpeed = Vector3.up;
+    public Vector3 moveSpeed = new Vector3(0, 75, 0);
     RectTransform textTransform;
 
 
