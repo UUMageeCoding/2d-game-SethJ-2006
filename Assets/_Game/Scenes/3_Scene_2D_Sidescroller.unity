@@ -84647,8 +84647,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281383154
+  m_fontColor: {r: 0.9496855, g: 0.7225327, b: 0.18814513, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -92762,11 +92762,13 @@ MonoBehaviour:
   - {fileID: 917902215}
   - {fileID: 1496316221}
   - {fileID: 972789688}
-  - {fileID: 1217037496}
   - {fileID: 1832586218}
-  - {fileID: 2007683058}
-  - {fileID: 414196302}
+  - {fileID: 1217037496}
+  - {fileID: 881341987}
+  - {fileID: 199852052}
+  - {fileID: 1232186905}
   - {fileID: 909182369}
+  - {fileID: 1334234583}
 --- !u!212 &2100923694
 SpriteRenderer:
   m_ObjectHideFlags: 0
