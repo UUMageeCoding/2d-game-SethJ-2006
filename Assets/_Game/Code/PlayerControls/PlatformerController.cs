@@ -23,7 +23,6 @@ public class PlatformerController : MonoBehaviour
     private SpriteRenderer sr;
     private bool isGrounded;
     private float moveInput;
-    // private Vector2 movement;
 
     public float knockbackForce;
     public float knockbackCounter;
@@ -54,8 +53,7 @@ public class PlatformerController : MonoBehaviour
         {
             animator.SetBool("IsRunning", false);
         }
-        // bool flipped = movement.x < 0;
-        // this.transform.rotation = Quaternion.Euler(new Vector3(0f, flipped ? 180f : 0f, 0f));
+
 
         if (moveInput > 0)
         {

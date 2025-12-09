@@ -6,6 +6,7 @@ public class PlatformAttackHitbox : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    [SerializeField] Transform attackPos;
+   [SerializeField] private SpriteRenderer spriteRenderer;
    public float attackRadius = 1f;
    public int damage = 1;
     public LayerMask enemyLayer;

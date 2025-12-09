@@ -28308,7 +28308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7309238602074000843, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7309238602074000843, guid: d2bd58d7fc00a3f4fa4ac2d180a3ff02, type: 3}
       propertyPath: m_LocalPosition.y
@@ -93037,7 +93037,7 @@ Transform:
   m_GameObject: {fileID: 2100923690}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.357, y: -0.05, z: 0}
+  m_LocalPosition: {x: 0.056, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93080,7 +93080,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.0022193938}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0.5}
     oldSize: {x: 0.71875, y: 0.25}
     newSize: {x: 0.71875, y: 0.25}
     adaptiveTilingThreshold: 0.5
@@ -93102,6 +93102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPos: {fileID: 2100923691}
+  spriteRenderer: {fileID: 0}
   attackRadius: 2.5
   damage: 1
   enemyLayer:
