@@ -16,13 +16,13 @@ public class NumberSaved : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        woundedText.text = "NO. SAVED: " + noSaved.ToString() + " / 5";
+        woundedText.text = "NO. SAVED: " + noSaved.ToString() + " / 6";
     }
 
     // Update is called once per frame
     public void SavedCharacter(int v)
     {
         noSaved += v;
-        woundedText.text = "NO. SAVED: " + noSaved.ToString() + " / 5";
+        woundedText.text = "NO. SAVED: " + noSaved.ToString() + " / 6";
     }
 }
