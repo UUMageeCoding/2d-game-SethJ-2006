@@ -28,6 +28,7 @@ public class PlatformerController : MonoBehaviour
     public float knockbackCounter;
     public float knockbackTotalTime;
     public bool knockbackFromRight;
+    Vector2 startingPosition;
 
     void Start()
     {
@@ -39,6 +40,9 @@ public class PlatformerController : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb.gravityScale = 3f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        // Set the player's starting position
+        startingPosition = transform.position;
     }
 
     void Update()
@@ -101,11 +105,28 @@ public class PlatformerController : MonoBehaviour
         }
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
     }
-    
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Pit"))
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Respawn();
+    }
+    void Respawn()
+    {
+        transform.position = startingPosition;
+    }
 
 
-        // Visualise ground check in editor
-        void OnDrawGizmosSelected()
+
+    // Visualise ground check in editor
+    void OnDrawGizmosSelected()
         {
             if (groundCheck != null)
             {
