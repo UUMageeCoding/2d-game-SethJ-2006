@@ -3,7 +3,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     PlatformerController platformerController;
-    
+    public Transform respawnPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -14,7 +14,7 @@ public class Checkpoint : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            platformerController.UpdateCheckpoint(transform.position);
+            platformerController.UpdateCheckpoint(respawnPoint.position);
             Debug.Log("Checkpoint reached!");
         }
     }
