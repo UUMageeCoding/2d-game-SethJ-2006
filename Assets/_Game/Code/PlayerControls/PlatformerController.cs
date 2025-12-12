@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -116,10 +117,11 @@ public class PlatformerController : MonoBehaviour
 
     void Die()
     {
-        Respawn();
+        StartCoroutine(Respawn(1f));
     }
-    void Respawn()
+    IEnumerator Respawn(float duration)
     {
+        yield return new WaitForSeconds(duration);
         transform.position = startingPosition;
     }
 
