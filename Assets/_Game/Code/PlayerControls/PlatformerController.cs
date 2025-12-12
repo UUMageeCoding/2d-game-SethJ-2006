@@ -115,6 +115,11 @@ public class PlatformerController : MonoBehaviour
         }
     }
 
+        public void UpdateCheckpoint(Vector2 pos)
+    {
+        respawnPosition = pos;
+    }
+
     void Die()
     {
         StartCoroutine(Respawn(1f));
@@ -125,11 +130,6 @@ public class PlatformerController : MonoBehaviour
         yield return new WaitForSeconds(duration);
         transform.position = respawnPosition;
         sr.enabled = true;
-    }
-
-    public void UpdateCheckpoint(Vector2 pos)
-    {
-        respawnPosition = pos;
     }
 
 

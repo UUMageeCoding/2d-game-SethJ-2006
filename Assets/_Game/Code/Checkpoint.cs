@@ -18,10 +18,4 @@ public class Checkpoint : MonoBehaviour
             Debug.Log("Checkpoint reached!");
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
