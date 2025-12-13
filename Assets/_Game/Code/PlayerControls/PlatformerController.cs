@@ -43,7 +43,7 @@ public class PlatformerController : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         // Set the player's starting position
-        // respawnPosition = transform.position;
+        transform.position = RespawnManager.Instance.respawnPosition;
     }
 
     void Update()
