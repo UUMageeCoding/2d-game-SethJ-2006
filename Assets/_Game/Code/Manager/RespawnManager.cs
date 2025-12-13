@@ -25,4 +25,18 @@ public class RespawnManager : MonoBehaviour
         
         DontDestroyOnLoad(this);
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Pit"))
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        // StartCoroutine(Respawn(1f));
+        // Debug.Log(respawnPosition.ToString());
+    }
+
 }
