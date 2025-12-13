@@ -27,6 +27,7 @@ public class PlatformCharacterHealth : MonoBehaviour
         if(playerHealth <= 0)
         {
             platformerController.Die();
+            playerHealth = maxHealth;
         }
     }
 
