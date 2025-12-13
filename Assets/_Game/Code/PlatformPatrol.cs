@@ -34,5 +34,15 @@ public class PlatformEnemyPatrol : MonoBehaviour
         {
             isFacingRight = !isFacingRight;
         }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.transform.SetParent(null);
     }
 }

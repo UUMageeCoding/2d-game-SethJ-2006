@@ -617,7 +617,7 @@ Transform:
   m_GameObject: {fileID: 193156251}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.23, y: 4.59651, z: 0}
+  m_LocalPosition: {x: -2.2300034, y: 4.59651, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -678,9 +678,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199852053}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PatrolRoller
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1156,6 +1156,7 @@ GameObject:
   - component: {fileID: 414196306}
   - component: {fileID: 414196305}
   - component: {fileID: 414196304}
+  - component: {fileID: 414196310}
   m_Layer: 3
   m_Name: PatrolRoller
   m_TagString: Enemy
@@ -1347,6 +1348,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &414196310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414196302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ebd8c4e85b8e7419be1870a0713c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 1
 --- !u!1 &424384004
 GameObject:
   m_ObjectHideFlags: 0
@@ -41228,6 +41243,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1229444048}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1061471316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1061471317}
+  m_Layer: 3
+  m_Name: MovingMinecart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1061471317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061471316}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.07, y: 0.5360198, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1069593669 stripped
 RectTransform:
@@ -118076,9 +118122,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1232186906}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PatrolRoller (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118692,8 +118738,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   playerHealth: 5
-  isDead: 0
-  Respawn: 0
   healthBarText: {fileID: 1331981278}
 --- !u!114 &1373976579
 MonoBehaviour:
@@ -126294,6 +126338,7 @@ GameObject:
   - component: {fileID: 2007683061}
   - component: {fileID: 2007683060}
   - component: {fileID: 2007683059}
+  - component: {fileID: 2007683066}
   m_Layer: 3
   m_Name: PatrolRoller
   m_TagString: Enemy
@@ -126485,6 +126530,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 199852053}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2007683066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007683058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ebd8c4e85b8e7419be1870a0713c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 1
 --- !u!1001 &2034667509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135610,7 +135669,7 @@ Transform:
   m_GameObject: {fileID: 2061822494}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.9, y: 4.53651, z: 0}
+  m_LocalPosition: {x: -12.900002, y: 4.5365105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136134,6 +136193,7 @@ SceneRoots:
   - {fileID: 937362396}
   - {fileID: 1560574607}
   - {fileID: 281743728}
+  - {fileID: 1061471317}
   - {fileID: 1410468036}
   - {fileID: 1848148499}
   - {fileID: 620868662}
