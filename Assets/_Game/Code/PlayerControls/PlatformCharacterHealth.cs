@@ -7,6 +7,7 @@ public class PlatformCharacterHealth : MonoBehaviour
 {
     public int maxHealth = 10;
     public int playerHealth;
+    [SerializeField] private PlatformerController platformerController;
 
     // public bool isDead;
     // public int Respawn;
@@ -22,9 +23,10 @@ public class PlatformCharacterHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         playerHealth -= damage;
+        playerHealth=Mathf.Clamp(playerHealth, 0, maxHealth);
         if(playerHealth <= 0)
         {
-            Destroy(gameObject);
+            platformerController.Die();
         }
     }
 

@@ -120,7 +120,7 @@ public class PlatformerController : MonoBehaviour
         //respawnPosition = pos;
     //}
 
-    void Die()
+    public void Die()
     {
         StartCoroutine(Respawn(1f));
         // Debug.Log(respawnPosition.ToString());

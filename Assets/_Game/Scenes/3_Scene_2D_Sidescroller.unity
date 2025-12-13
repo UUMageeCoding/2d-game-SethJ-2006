@@ -133828,6 +133828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   playerHealth: 5
+  platformerController: {fileID: 1373976590}
   healthBarText: {fileID: 1331981278}
 --- !u!114 &1373976579
 MonoBehaviour:
