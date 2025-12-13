@@ -8,8 +8,8 @@ public class PlatformCharacterHealth : MonoBehaviour
     public int maxHealth = 10;
     public int playerHealth;
 
-    public bool isDead;
-    public int Respawn;
+    // public bool isDead;
+    // public int Respawn;
 
     public TMP_Text healthBarText;
     
@@ -31,13 +31,13 @@ public class PlatformCharacterHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHealth <= 0 && !isDead)
-        {
-            isDead = true;
-            gameObject.SetActive(false);
-            Debug.Log("You Are Dead");
-            SceneManager.LoadScene(Respawn);
-        }
+        // if (playerHealth <= 0 && !isDead)
+        // {
+            // isDead = true;
+            // gameObject.SetActive(false);
+            // Debug.Log("You Are Dead");
+            // SceneManager.LoadScene(Respawn);
+        // }
 
         healthBarText.text = "Health: " + playerHealth + " / 10";
     }
