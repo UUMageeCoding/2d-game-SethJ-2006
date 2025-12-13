@@ -14,7 +14,8 @@ public class Checkpoint : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            platformerController.UpdateCheckpoint(respawnPoint.position);
+            // platformerController.UpdateCheckpoint(respawnPoint.position);
+            RespawnManager.Instance.respawnPosition = respawnPoint.position;
             Debug.Log("Checkpoint reached!");
         }
     }

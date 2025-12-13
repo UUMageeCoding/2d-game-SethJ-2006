@@ -29,7 +29,7 @@ public class PlatformerController : MonoBehaviour
     public float knockbackCounter;
     public float knockbackTotalTime;
     public bool knockbackFromRight;
-    Vector2 respawnPosition;
+    // Vector2 respawnPosition;
 
     void Start()
     {
@@ -43,7 +43,7 @@ public class PlatformerController : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         // Set the player's starting position
-        respawnPosition = transform.position;
+        // respawnPosition = transform.position;
     }
 
     void Update()
@@ -115,21 +115,21 @@ public class PlatformerController : MonoBehaviour
         }
     }
 
-        public void UpdateCheckpoint(Vector2 pos)
-    {
-        respawnPosition = pos;
-    }
+        //public void UpdateCheckpoint(Vector2 pos)
+    //{
+        //respawnPosition = pos;
+    //}
 
     void Die()
     {
         StartCoroutine(Respawn(1f));
-        Debug.Log(respawnPosition.ToString());
+        // Debug.Log(respawnPosition.ToString());
     }
     IEnumerator Respawn(float duration)
     {
         sr.enabled = false;
         yield return new WaitForSeconds(duration);
-        transform.position = respawnPosition;
+        transform.position = RespawnManager.Instance.respawnPosition;
         sr.enabled = true;
     }
 
