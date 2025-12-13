@@ -123,6 +123,7 @@ public class PlatformerController : MonoBehaviour
     void Die()
     {
         StartCoroutine(Respawn(1f));
+        Debug.Log(respawnPosition.ToString());
     }
     IEnumerator Respawn(float duration)
     {
