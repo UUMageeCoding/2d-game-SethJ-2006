@@ -128,10 +128,17 @@ public class PlatformerController : MonoBehaviour
     IEnumerator Respawn(float duration)
     {
         //sr.enabled = false;
-            transform.localScale = new Vector3(0, 0, 0);
+        moveSpeed = 0f;
+        jumpForce = 0f;
+        knockbackCounter = 0;
+        rb.gravityScale = 0f;
+            transform.localScale = new Vector3(0, 0, 1);
         yield return new WaitForSeconds(duration);
         transform.position = RespawnManager.Instance.respawnPosition;
         //sr.enabled = true;
+        moveSpeed = 7f;
+        jumpForce = 12f;
+        rb.gravityScale = 3f;
             transform.localScale = new Vector3(2, 2, 1);
     }
 
