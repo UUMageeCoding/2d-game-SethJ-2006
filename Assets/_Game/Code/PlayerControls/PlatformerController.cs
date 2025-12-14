@@ -135,6 +135,7 @@ public class PlatformerController : MonoBehaviour
     {
         //sr.enabled = false;
         audioManager.PlaySFX(audioManager.playerDeath);
+        //animator.SetTrigger("PlayerDied");
         moveSpeed = 0f;
         jumpForce = 0f;
         knockbackCounter = 0;
