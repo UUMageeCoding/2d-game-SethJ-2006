@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     [Header("---Audio Clips---")]
     public AudioClip background;
     public AudioClip jump;
+
     public AudioClip playerAttack;
     public AudioClip playerDeath;
     public AudioClip enemyFire;
