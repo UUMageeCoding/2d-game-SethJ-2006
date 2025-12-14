@@ -9,6 +9,8 @@ public class PlatformCharacterHealth : MonoBehaviour
     public int playerHealth;
     [SerializeField] private PlatformerController platformerController;
 
+    AudioManager audioManager;
+
     // public bool isDead;
     // public int Respawn;
 
@@ -18,11 +20,13 @@ public class PlatformCharacterHealth : MonoBehaviour
     void Start()
     {
         playerHealth = maxHealth;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void TakeDamage(int damage)
     {
         playerHealth -= damage;
+        audioManager.PlaySFX(audioManager.playerDamaged);
         playerHealth=Mathf.Clamp(playerHealth, 0, maxHealth);
         if(playerHealth <= 0)
         {
