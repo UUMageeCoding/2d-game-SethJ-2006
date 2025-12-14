@@ -88,7 +88,6 @@ public class PlatformerController : MonoBehaviour
             animator.SetBool("IsGrounded", false);
             audioManager.PlaySFX(audioManager.jump);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            
         }
     }
 
