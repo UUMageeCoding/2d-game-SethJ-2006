@@ -15,5 +15,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip heal;
     public AudioClip rescue;
 
-    
+    private void Start()
+    {
+        musicSource.clip=background;
+        musicSource.Play();
+    }
 }
