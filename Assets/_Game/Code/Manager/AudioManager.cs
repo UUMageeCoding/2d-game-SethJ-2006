@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip enemyFire;
     public AudioClip heal;
     public AudioClip rescue;
+    public AudioClip checkpoint;
+    public AudioClip enemyDamaged;
 
     private void Start()
     {
