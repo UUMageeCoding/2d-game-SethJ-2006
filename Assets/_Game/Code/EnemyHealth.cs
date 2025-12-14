@@ -7,14 +7,18 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField] private float maxHealth;
     public float currentHealth;
 
+    AudioManager audioManager;
+
     private void Start()
     {
         currentHealth = maxHealth;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        audioManager.PlaySFX(audioManager.enemyDamaged);
         if(currentHealth <= 0)
         {
             Destroy(gameObject);
