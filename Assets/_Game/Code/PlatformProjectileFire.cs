@@ -5,10 +5,12 @@ public class PlatformProjectileFire : MonoBehaviour
     public GameObject projectile;
     public Transform projectilePos;
     private float cooldownTimer;
+
+    AudioManager audioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -25,5 +27,6 @@ public class PlatformProjectileFire : MonoBehaviour
     void shoot()
     {
         Instantiate(projectile, projectilePos.position, Quaternion.identity);
+        audioManager.PlaySFX(audioManager.enemyFire);
     }
 }
