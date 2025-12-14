@@ -30,6 +30,7 @@ public class PlatformerController : MonoBehaviour
     public float knockbackTotalTime;
     public bool knockbackFromRight;
     // Vector2 respawnPosition;
+    AudioManager audioManager;
 
     void Start()
     {
@@ -44,6 +45,10 @@ public class PlatformerController : MonoBehaviour
 
         // Set the player's starting position
         transform.position = RespawnManager.Instance.respawnPosition;
+    }
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -80,8 +85,10 @@ public class PlatformerController : MonoBehaviour
         // Jump input
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            animator.GetBool("IsGrounded");
+            animator.SetBool("IsGrounded", false);
+            audioManager.PlaySFX(audioManager.jump);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            
         }
     }
 
@@ -122,12 +129,13 @@ public class PlatformerController : MonoBehaviour
 
     public void Die()
     {
-        StartCoroutine(Respawn(1f));
+        StartCoroutine(Respawn(2f));
         // Debug.Log(respawnPosition.ToString());
     }
     IEnumerator Respawn(float duration)
     {
         //sr.enabled = false;
+        audioManager.PlaySFX(audioManager.playerDeath);
         moveSpeed = 0f;
         jumpForce = 0f;
         knockbackCounter = 0;
