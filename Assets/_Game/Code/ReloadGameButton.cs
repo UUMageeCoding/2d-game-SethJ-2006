@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NewMonoBehaviourScript : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
@@ -17,6 +18,10 @@ public class NewMonoBehaviourScript : MonoBehaviour, IPointerDownHandler, IPoint
     public void IWasClicked()
     {
         Debug.Log("Clicked");
+    }
+    public void ReplayGame()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
 }
