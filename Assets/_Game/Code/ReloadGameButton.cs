@@ -21,7 +21,7 @@ public class NewMonoBehaviourScript : MonoBehaviour, IPointerDownHandler, IPoint
     }
     public void ReplayGame()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
