@@ -13,7 +13,8 @@ public class PlatformAttackHitbox : MonoBehaviour
    public int damage = 1;
     public LayerMask enemyLayer;
 
-    public PlatformerController sr;
+    public PlatformerController playerCharacter;
+    SpriteRenderer hbsr;
     // public EnemyHealth maxHealth;
     // private void OnTriggerEnter2D(Collider2D collision){if (collision.gameObject.CompareTag("Enemy")){maxHealth.TakeDamage(damage);}}
 
@@ -21,16 +22,17 @@ public class PlatformAttackHitbox : MonoBehaviour
     
     private void Start()
     {
+        hbsr = playerCharacter.sr;
         Attack();
     }
 
     void FixedUpdate()
     {
-        if(sr.flipX == true)
+        if(hbsr.flipX == true)
         {
             spriteRenderer.flipX = true;
         }
-        else if(sr.flipX == false)
+        else if(hbsr.flipX == false)
         {
             spriteRenderer.flipX = false;
         }

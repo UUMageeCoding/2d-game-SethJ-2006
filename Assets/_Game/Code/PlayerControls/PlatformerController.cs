@@ -21,7 +21,7 @@ public class PlatformerController : MonoBehaviour
 
     Rigidbody2D rb;
     private Animator animator;
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
     private bool isGrounded;
     private float moveInput;
 
