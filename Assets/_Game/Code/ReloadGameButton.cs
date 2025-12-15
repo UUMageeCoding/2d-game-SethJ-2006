@@ -14,4 +14,9 @@ public class NewMonoBehaviourScript : MonoBehaviour, IPointerDownHandler, IPoint
         throw new System.NotImplementedException();
     }
 
+    public void IWasClicked()
+    {
+        Debug.Log("Clicked");
+    }
+
 }
