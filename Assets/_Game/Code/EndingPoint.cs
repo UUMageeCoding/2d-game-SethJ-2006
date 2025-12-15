@@ -1,3 +1,4 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class EndingPoint : MonoBehaviour
@@ -7,6 +8,7 @@ public class EndingPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Go to ending scene.
+            SceneController.instance.EndingScene();
         }
     }
 }
