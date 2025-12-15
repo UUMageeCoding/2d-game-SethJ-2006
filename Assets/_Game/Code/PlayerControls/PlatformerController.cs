@@ -77,7 +77,7 @@ public class PlatformerController : MonoBehaviour
         // Check if grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-       
+
 
 
 
@@ -88,6 +88,14 @@ public class PlatformerController : MonoBehaviour
             animator.SetBool("IsGrounded", false);
             audioManager.PlaySFX(audioManager.jump);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+        if (isGrounded)
+        {
+            animator.SetBool("IsGrounded", true);
+        }
+        else
+        {
+            animator.SetBool("IsGrounded", false);
         }
     }
 
