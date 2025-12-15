@@ -136,7 +136,7 @@ public class PlatformerController : MonoBehaviour
 
     public void Die()
     {
-        StartCoroutine(Respawn(2f));
+        StartCoroutine(Respawn(1f));
         // Debug.Log(respawnPosition.ToString());
     }
     IEnumerator Respawn(float duration)
