@@ -143,19 +143,19 @@ public class PlatformerController : MonoBehaviour
     {
         //sr.enabled = false;
         audioManager.PlaySFX(audioManager.playerDeath);
-        //animator.SetTrigger("PlayerDied");
+        animator.SetTrigger("PlayerDied");
         moveSpeed = 0f;
         jumpForce = 0f;
         knockbackCounter = 0;
         rb.gravityScale = 0f;
-            transform.localScale = new Vector3(0, 0, 1);
+            //transform.localScale = new Vector3(0, 0, 1);
         yield return new WaitForSeconds(duration);
         transform.position = RespawnManager.Instance.respawnPosition;
         //sr.enabled = true;
         moveSpeed = 7f;
         jumpForce = 12f;
         rb.gravityScale = 3f;
-            transform.localScale = new Vector3(2, 2, 1);
+            //transform.localScale = new Vector3(2, 2, 1);
     }
 
 
