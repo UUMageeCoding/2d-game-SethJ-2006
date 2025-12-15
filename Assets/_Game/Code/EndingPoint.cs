@@ -8,7 +8,7 @@ public class EndingPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Go to ending scene.
-            // SceneController.instance.EndingScene();
+            SceneController.instance.EndingScene();
             Debug.Log("You're winner");
         }
     }

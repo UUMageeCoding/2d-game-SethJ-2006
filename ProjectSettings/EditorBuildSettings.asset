@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/3_Scene_2D_Sidescroller.unity
     guid: d74a3adba31ccd241a65e249cc67af2a
+  - enabled: 1
+    path: Assets/_Game/Scenes/4_Scene_2D_End_Screen.unity
+    guid: 13381290290228742800e098bfd40ad9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
